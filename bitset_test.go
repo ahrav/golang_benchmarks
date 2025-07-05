@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/RoaringBitmap/roaring"
-	"github.com/willf/bitset"
+	"github.com/bits-and-blooms/bitset"
 )
 
 func BenchmarkBitsetRoaringConsecutive1000(b *testing.B) {

@@ -12,7 +12,7 @@ import (
 	"github.com/OneOfOne/xxhash"
 	"github.com/dchest/siphash"
 	"github.com/dgryski/go-farm"
-	"github.com/dgryski/go-highway"
+	// "github.com/dgryski/go-highway"
 	metro "github.com/dgryski/go-metro"
 	"github.com/dgryski/go-spooky"
 	"github.com/spaolacci/murmur3"
@@ -168,12 +168,12 @@ func BenchmarkHash128SipHash(b *testing.B) {
 	}
 }
 
-func BenchmarkHash64HighwayHash(b *testing.B) {
-	keys := highway.Lanes{}
-	for i := 0; i < b.N; i++ {
-		highway.Hash(keys, testBytes)
-	}
-}
+// func BenchmarkHash64HighwayHash(b *testing.B) {
+// 	keys := highway.Lanes{}
+// 	for i := 0; i < b.N; i++ {
+// 		highway.Hash(keys, testBytes)
+// 	}
+// }
 
 func BenchmarkHash32SpookyHash(b *testing.B) {
 	for i := 0; i < b.N; i++ {
